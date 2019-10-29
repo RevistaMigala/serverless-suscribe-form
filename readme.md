@@ -1,6 +1,6 @@
 # Serverless suscribe form
 
-This repo contains the handler for suscriptions in [gyarados.red](gyarados.red), the music project for [Migala](migala.mx).
+This repo contains the handler for suscriptions in [gyarados.red](https://gyarados.red), the music project for [Migala](https://migala.mx).
 
 
 ## Dependencies
