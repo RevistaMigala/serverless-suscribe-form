@@ -1,0 +1,23 @@
+{
+  "name": "suscribe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f ./config/env.local serverless offline start",
+    "dynamodb:start": "java -Djava.library.path=~/dynamodb_local/DynamoDBLocal_lib -jar ~/dynamodb_local/DynamoDBLocal.jar -sharedDb",
+    "dynamodb:create": "env-cmd -f config/env.local node ./config/dynamodb_local/create_table.js",
+    "dynamodb:delete": "env-cmd -f config/env.local node ./config/dynamodb_local/delete_table.js",
+    "deploy:prod": "env-cmd -f config/env.prod serverless deploy --aws-profile $AWS_PROFILE"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "serverless-offline": "^5.12.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.558.0"
+  }
+}
